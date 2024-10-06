@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Average Grade Counter
 // @namespace    http://tampermonkey.net
-// @version      1.0.0
+// @version      1.0.1
 // @description  Добавляет столбец со средним баллом для dnevnik2.petersburgedu.ru
 // @author       KryptonFox
 // @match        https://dnevnik2.petersburgedu.ru/estimate
@@ -96,9 +96,7 @@
 
     function setObserver() {
         var observer = new MutationObserver(function (mutations) {
-            console.log(1);
             if ($('div#table-is-patched').length === 0) {
-                console.log(2);
                 var container = $('div.date-grid.ng-star-inserted');
                 if (!container.length)
                     return;
@@ -119,7 +117,7 @@
 
     (function () {
         $(function () {
-            console.log('hewwo wowd');
+            console.log('hewwo wowd fwom KryptonFox ^^');
             setObserver();
         });
     })();

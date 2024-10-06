@@ -5,9 +5,7 @@ import patchTable from './patchTable'
 
 export default function setObserver() {
   const observer = new MutationObserver((mutations) => {
-    console.log(1)
     if ($('div#table-is-patched').length === 0) {
-      console.log(2)
       const container = $('div.date-grid.ng-star-inserted')
       if (!container.length) return
 
